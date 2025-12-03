@@ -1,0 +1,433 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LIGHT MODE - Renaissance warm palette */
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+  --background: 35 30% 92%;
+  --foreground: 25 25% 15%;
+  --border: 35 20% 80%;
+  --card: 38 35% 88%;
+  --card-foreground: 25 25% 15%;
+  --card-border: 35 25% 78%;
+  --sidebar: 30 25% 85%;
+  --sidebar-foreground: 25 25% 15%;
+  --sidebar-border: 30 20% 75%;
+  --sidebar-primary: 35 65% 35%;
+  --sidebar-primary-foreground: 40 50% 95%;
+  --sidebar-accent: 30 20% 80%;
+  --sidebar-accent-foreground: 25 25% 15%;
+  --sidebar-ring: 35 65% 35%;
+  --popover: 38 30% 90%;
+  --popover-foreground: 25 25% 15%;
+  --popover-border: 35 20% 78%;
+  --primary: 35 65% 35%;
+  --primary-foreground: 40 50% 95%;
+  --secondary: 30 15% 82%;
+  --secondary-foreground: 25 25% 18%;
+  --muted: 35 15% 85%;
+  --muted-foreground: 25 15% 40%;
+  --accent: 38 25% 85%;
+  --accent-foreground: 25 25% 15%;
+  --destructive: 0 65% 45%;
+  --destructive-foreground: 0 65% 98%;
+  --input: 35 15% 70%;
+  --ring: 35 65% 35%;
+  --chart-1: 35 70% 45%;
+  --chart-2: 45 60% 50%;
+  --chart-3: 25 55% 40%;
+  --chart-4: 15 50% 45%;
+  --chart-5: 50 65% 55%;
+  --font-sans: 'EB Garamond', Georgia, serif;
+  --font-serif: 'Cinzel', Georgia, serif;
+  --font-mono: 'Cormorant Garamond', Georgia, serif;
+  --radius: .5rem;
+  --shadow-2xs: 0px 2px 4px 0px hsl(35 30% 20% / 0.08);
+  --shadow-xs: 0px 2px 4px 0px hsl(35 30% 20% / 0.10);
+  --shadow-sm: 0px 2px 4px 0px hsl(35 30% 20% / 0.12), 0px 1px 2px -1px hsl(35 30% 20% / 0.08);
+  --shadow: 0px 2px 6px 0px hsl(35 30% 20% / 0.12), 0px 1px 3px -1px hsl(35 30% 20% / 0.10);
+  --shadow-md: 0px 4px 8px 0px hsl(35 30% 20% / 0.14), 0px 2px 4px -1px hsl(35 30% 20% / 0.10);
+  --shadow-lg: 0px 6px 12px 0px hsl(35 30% 20% / 0.16), 0px 4px 6px -1px hsl(35 30% 20% / 0.10);
+  --shadow-xl: 0px 10px 20px 0px hsl(35 30% 20% / 0.18), 0px 8px 10px -1px hsl(35 30% 20% / 0.10);
+  --shadow-2xl: 0px 16px 32px 0px hsl(35 30% 20% / 0.20);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+.dark {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+  --background: 25 20% 10%;
+  --foreground: 38 25% 90%;
+  --border: 25 15% 22%;
+  --card: 28 18% 14%;
+  --card-foreground: 38 25% 90%;
+  --card-border: 25 15% 20%;
+  --sidebar: 25 18% 12%;
+  --sidebar-foreground: 38 25% 90%;
+  --sidebar-border: 25 15% 18%;
+  --sidebar-primary: 40 60% 50%;
+  --sidebar-primary-foreground: 25 20% 10%;
+  --sidebar-accent: 25 15% 20%;
+  --sidebar-accent-foreground: 38 20% 88%;
+  --sidebar-ring: 40 60% 50%;
+  --popover: 28 18% 16%;
+  --popover-foreground: 38 25% 90%;
+  --popover-border: 25 15% 22%;
+  --primary: 40 60% 50%;
+  --primary-foreground: 25 20% 10%;
+  --secondary: 25 12% 22%;
+  --secondary-foreground: 38 20% 88%;
+  --muted: 25 12% 20%;
+  --muted-foreground: 38 15% 60%;
+  --accent: 28 15% 18%;
+  --accent-foreground: 38 20% 88%;
+  --destructive: 0 65% 48%;
+  --destructive-foreground: 0 65% 98%;
+  --input: 25 12% 28%;
+  --ring: 40 60% 50%;
+  --chart-1: 40 70% 55%;
+  --chart-2: 50 65% 60%;
+  --chart-3: 30 55% 50%;
+  --chart-4: 20 50% 55%;
+  --chart-5: 55 65% 60%;
+  --shadow-2xs: 0px 2px 4px 0px hsl(25 20% 5% / 0.20);
+  --shadow-xs: 0px 2px 4px 0px hsl(25 20% 5% / 0.25);
+  --shadow-sm: 0px 2px 4px 0px hsl(25 20% 5% / 0.30), 0px 1px 2px -1px hsl(25 20% 5% / 0.20);
+  --shadow: 0px 2px 6px 0px hsl(25 20% 5% / 0.30), 0px 1px 3px -1px hsl(25 20% 5% / 0.25);
+  --shadow-md: 0px 4px 8px 0px hsl(25 20% 5% / 0.35), 0px 2px 4px -1px hsl(25 20% 5% / 0.25);
+  --shadow-lg: 0px 6px 12px 0px hsl(25 20% 5% / 0.40), 0px 4px 6px -1px hsl(25 20% 5% / 0.30);
+  --shadow-xl: 0px 10px 20px 0px hsl(25 20% 5% / 0.45), 0px 8px 10px -1px hsl(25 20% 5% / 0.30);
+  --shadow-2xl: 0px 16px 32px 0px hsl(25 20% 5% / 0.50);
+
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  .no-default-hover-elevate {}
+  .no-default-active-elevate {}
+
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+
+  /* Renaissance decorative text */
+  .font-heading {
+    font-family: 'Cinzel', Georgia, serif;
+  }
+
+  /* Enhanced Animation Effects */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 0 8px rgba(212, 175, 55, 0);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  @keyframes flip-in {
+    from {
+      opacity: 0;
+      transform: rotateY(90deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+  }
+
+  .fade-in {
+    animation: fade-in 0.4s ease-in-out;
+  }
+
+  .slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+
+  .scale-in {
+    animation: scale-in 0.4s ease-out;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s infinite;
+  }
+
+  .bounce {
+    animation: bounce 1s ease-in-out;
+  }
+
+  .shimmer {
+    animation: shimmer 2s infinite;
+    background-size: 200% 100%;
+  }
+
+  .flip-in {
+    animation: flip-in 0.6s ease-out;
+  }
+
+  /* Icon animations */
+  .icon-bounce {
+    animation: bounce 1.5s ease-in-out infinite;
+  }
+
+  .icon-spin {
+    animation: spin 2s linear infinite;
+  }
+
+  /* Card animations */
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Text animations */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      currentColor 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      currentColor 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .font-body {
+    font-family: 'EB Garamond', Georgia, serif;
+  }
+
+  .font-label {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  /* Parchment texture overlay */
+  .parchment-bg {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--background)) 25%,
+      hsl(var(--card)) 50%,
+      hsl(var(--background)) 75%,
+      hsl(var(--card)) 100%
+    );
+    background-size: 200% 200%;
+  }
+
+  /* Decorative border for Renaissance style */
+  .renaissance-border {
+    border: 2px solid hsl(var(--primary) / 0.3);
+    box-shadow: 
+      inset 0 0 0 1px hsl(var(--primary) / 0.1),
+      0 4px 12px hsl(var(--primary) / 0.1);
+  }
+
+  /* Gold accent text */
+  .text-gold {
+    color: hsl(40 70% 45%);
+  }
+
+  .dark .text-gold {
+    color: hsl(40 70% 55%);
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Slide up animation for choices */
+  .slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
